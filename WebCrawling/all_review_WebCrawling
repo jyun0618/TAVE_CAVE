@@ -1,0 +1,154 @@
+# 셀레니움 설치
+!pip install selenium
+
+# 크롬드라이버 및 크롬 설치
+!apt-get update
+!apt install -y chromium-chromedriver
+
+# 환경변수 등록
+!cp /usr/lib/chromium-browser/chromedriver /usr/bin
+
+# 경로 설정
+import sys
+sys.path.insert(0, '/usr/lib/chromium-browser/')
+
+
+!apt update
+!apt install -y wget unzip
+!wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+!dpkg -i google-chrome-stable_current_amd64.deb
+!apt --fix-broken install -y
+
+# 크롬드라이버 설치 (chrome 버전에 맞게 자동 설치됨)
+!wget -N https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
+!unzip -o chromedriver_linux64.zip -d /usr/bin/
+!chmod +x /usr/bin/chromedriver
+
+
+!google-chrome --version
+
+
+!wget -N https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/137.0.7151.55/linux64/chromedriver-linux64.zip
+!unzip -o chromedriver-linux64.zip -d /usr/bin/
+!mv /usr/bin/chromedriver-linux64/chromedriver /usr/bin/chromedriver
+!chmod +x /usr/bin/chromedriver
+
+import time
+import pandas as pd
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from bs4 import BeautifulSoup
+from tqdm import tqdm
+
+# def is_healing_comment(text):
+    # healing_keywords = [
+    #     "힐링", "위로", "감동", "마음이 따뜻", "치유", "우울할 때", "마음이 편해졌",
+    #     "공감", "눈물", "힘이 됐", "감성적", "응원", "위안을", "희망"
+    # ]
+    # return any(keyword in text for keyword in healing_keywords)
+
+def get_watcha_content_id(drama_name):
+    options = Options()
+    options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    driver = webdriver.Chrome(options=options)
+
+    try:
+        search_url = f"https://pedia.watcha.com/ko-KR/search?query={drama_name}"
+        driver.get(search_url)
+        time.sleep(3)
+
+        with open("search_page.html", "w", encoding="utf-8") as f:
+            f.write(driver.page_source)
+
+        soup = BeautifulSoup(driver.page_source, "html.parser")
+        links = soup.select('a[href*="/ko-KR/contents/"]')
+
+        for link in links:
+            href = link.get("href")
+            if "/contents/" in href:
+                content_id = href.split("/contents/")[-1]
+                return content_id
+
+        return None
+    except Exception as e:
+        print(f"[ERROR] {drama_name}: {e}")
+        return None
+    finally:
+        driver.quit()
+
+def get_comments_from_watcha_id(content_id, scroll_count=5, wait_sec=2):
+    url = f"https://pedia.watcha.com/ko-KR/contents/{content_id}/comments"
+
+    options = Options()
+    options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    driver = webdriver.Chrome(options=options)
+
+    try:
+        driver.get(url)
+        time.sleep(3)
+
+        for _ in range(scroll_count):
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            time.sleep(wait_sec)
+
+        soup = BeautifulSoup(driver.page_source, "html.parser")
+        comment_tags = soup.select('p[class*="CommentText"]')
+        # comment_tags = soup.find_all("p", class_="BEKXQlwB vc3vf0Y6 CommentText")
+        comments = [tag.get_text(strip=True) for tag in comment_tags]
+        return comments
+    except Exception as e:
+        print(f"[ERROR] 댓글 크롤링 실패 ({content_id}): {e}")
+        return []
+    finally:
+        driver.quit()
+
+# ✅ drama.csv 불러오기 (상위 400개만)
+df = pd.read_csv("/content/drive/MyDrive/TAVE/Project/data/drama.csv")
+titles = df.iloc[0:401, 0].dropna().tolist() # 드라마 범위는 인덱스 수정해서 조정
+
+all_reviews = []
+not_found_titles = []
+
+for title in tqdm(titles):
+    try:
+        content_id = get_watcha_content_id(title)
+        if not content_id:
+            print(f"[SKIP] {title}: 콘텐츠 ID를 찾을 수 없음")
+            not_found_titles.append(title)
+            continue
+
+        comments = get_comments_from_watcha_id(content_id, scroll_count=3, wait_sec=2)
+        for comment in comments:
+            all_reviews.append((title, f"https://pedia.watcha.com/ko-KR/contents/{content_id}", comment))
+
+
+    except Exception as e:
+        print(f"[ERROR] {title}: {e}")
+        continue
+
+with open("all_watcha_reviews.txt", "w", encoding="utf-8") as f:
+    for title, url, comment in all_reviews:
+        f.write(f"[{title}] {url}\n{comment}\n\n")
+
+with open("not_found_titles.txt", "w", encoding="utf-8") as f:
+    for title in not_found_titles:
+        f.write(title + "\n")
+
+
+print(f"\n✅ 전체 리뷰 {len(all_reviews)}개 추출 완료")
+print("📄 저장: all_watcha_reviews.txt")
+print(f"❌ URL 못 찾은 작품 {len(not_found_titles)}개 -> not_found_titles.txt")
+
+
+```
+⭐ 크롤링 실패 드라마 리스트
+#좋맛탱: 좋은 맛에 취하다
+그녀로 꿈꾸는 것
+기상청 사람들: 사내연애 잔혹사 편
+로맨스가 필요해 2
+본대로 말하라
+```
