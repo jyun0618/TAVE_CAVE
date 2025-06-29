@@ -1,0 +1,336 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15/"
+     xml:base="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#공감_및_위로 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#공감_및_위로">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#기분전환"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#공감됨 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#공감됨">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#공감_및_위로"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#긍정적_에너지 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#긍정적_에너지">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#희망_및_용기"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#기분이_좋아짐 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#기분이_좋아짐">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#활력_회복"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#기분전환 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#기분전환"/>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#내_이야기를_보는_듯함 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#내_이야기를_보는_듯함">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#공감_및_위로"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#다시_힘을_얻음 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#다시_힘을_얻음">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#희망_및_용기"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#마음의_안식 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#마음의_안식">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#정서적_안정"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#마음이_가벼워짐 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#마음이_가벼워짐">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#스트레스_해소"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#빠져들었음 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#빠져들었음">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#몰입/집중"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#상쾌함 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#상쾌함">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#활력_회복"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#색다른_이야기 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#색다른_이야기">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#새로움/자극"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#스트레스_해소 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#스트레스_해소">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#기분전환"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#시간_가는_줄_모름 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#시간_가는_줄_모름">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#몰입/집중"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#신선함 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#신선함">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#새로움/자극"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#안도감 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#안도감">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#정서적_안정"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#에너지_충전 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#에너지_충전">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#활력_회복"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#용기_얻음 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#용기_얻음">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#희망_및_용기"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#웃음 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#웃음">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#재미"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#위로받음 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#위로받음">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#공감_및_위로"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#위로와_응원 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#위로와_응원">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#희망_및_용기"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#유쾌함 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#유쾌함">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#재미"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#이해받는_느낌 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#이해받는_느낌">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#공감_및_위로"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#일상에서_벗어남 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#일상에서_벗어남">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#스트레스_해소"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#자극_받음 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#자극_받음">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#새로움/자극"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#잔잔함 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#잔잔함">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#정서적_안정"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#재미 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#재미">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#기분전환"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#정서적_안정 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#정서적_안정">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#기분전환"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#즐거움 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#즐거움">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#재미"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#코믹함 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#코믹함">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#재미"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#평온함 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#평온함">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#정서적_안정"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#포근함 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#포근함">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#정서적_안정"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#현실을_잊음 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#현실을_잊음">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#몰입/집중"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#활력_얻음 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#활력_얻음">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#활력_회복"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#활력_회복 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#활력_회복">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#기분전환"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#희망_및_용기 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#희망_및_용기">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#기분전환"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#몰입/집중 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#몰입/집중">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#기분전환"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#새로움/자극 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#새로움/자극">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#기분전환"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#울음/감정_해소 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#울음/감정_해소">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/infostat_205/ontologies/2025/5/untitled-ontology-15#공감_및_위로"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
